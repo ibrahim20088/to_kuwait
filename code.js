@@ -4,7 +4,8 @@ function updateCountdown() {
 
     if (diff <= 0) {
         window.location.href = "https://ibrahim20088.github.io/ibrahimfun/";
-        return; // Exit the function to stop further countdown updates
+        clearInterval(countdownInterval);
+        return;
     }
 
     const d = Math.floor(diff / 1000 / 60 / 60 / 24);
@@ -18,4 +19,4 @@ function updateCountdown() {
     seconds.innerHTML = s < 10 ? '0' + s : s;
 }
 
-setInterval(updateCountdown, 1000);
+const countdownInterval = setInterval(updateCountdown, 1000);
