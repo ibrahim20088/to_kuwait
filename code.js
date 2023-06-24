@@ -13,6 +13,11 @@ function updateCountdown() {
 	const currentTime = new Date();
 	const diff = newYearTime - currentTime;
 
+
+	if (diff <= 0) { window.location.href = "https://ibrahim20088.github.io/ibrahimfun/";  
+	return;
+}
+	
 	const d = Math.floor(diff / 1000 / 60 / 60 / 24);
 	const h = Math.floor(diff / 1000 / 60 / 60) % 24;
 	const m = Math.floor(diff / 1000 / 60) % 60;
