@@ -5,13 +5,12 @@ const seconds = document.getElementById('seconds');
 
 const currentYear = new Date().getFullYear();
 
-const newYearTime = new Date(` June 19, 2024 12:55:00  
-`);
+const newYearTime = new Date(` October 7, 2023 00:00:00 `);
 
 // Update countdown time
 function updateCountdown() {
 	const currentTime = new Date();
-	const diff = newYearTime - currentTime;
+	const diff =  currentTime - newYearTime ;
 
 
 	if (diff <= 0) { window.location.href = "https://ibrahim20088.github.io/ibrahimfun/";  
